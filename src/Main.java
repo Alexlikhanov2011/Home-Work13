@@ -1,31 +1,24 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Книга первая: ");
-Book one = new Book("Анна Каренина", 1873, "Л.Толстой");
-Author surnameName = new Author("Лев", "Толстой");
-       System.out.println("Название книги: " + one.getName());
-       System.out.println("Год публикации книги: " + one.getYear());
-        System.out.println("Имя фамилия писателя: " + one.getAuthor());
-        System.out.println("Имя писателя: " + surnameName.getName());
-        System.out.println("Фамилия писателя: " + surnameName.getSurname());
+        Author author = new Author("Лев", "Толстой");
+        Book book = new Book("Анна Каренина", 1873, author);
+        System.out.println("Название книги: " + book.getName());
+        System.out.println("Год публикации книги: " + book.getYear());
+        System.out.println("Имя фамилия писателя: " + book.getAuthor().getName() + " " + book.getAuthor().getSurname());
         System.out.println();
-
-        one.setYear(1874);
-        System.out.println("Измененная дата публикации: " + one.getYear());
+        book.setYear(1874);
+        System.out.println("Измененная дата публикации: " + book.getYear());
 
         System.out.println();
 
         System.out.println("Книга вторая: ");
+        Author author1 = new Author("Федор", "Достоевский");
+        Book two = new Book("Идиот", 1867, author1);
 
-        Book two = new Book("Идиот", 1867, "Ф.Достоевский");
-        Author surnameName2 = new Author("Федор", "Достоевский");
 
-       System.out.println("Название книги: " + two.getName());
-       System.out.println("Год публикации книги: " + two.getYear());
-        System.out.println("Имя фамилия писателя: " + two.getAuthor());
-        System.out.println("Имя писателя: " + surnameName2.getName());
-        System.out.println("Фамилия писателя: " + surnameName2.getSurname());
+        System.out.println("Название книги: " + two.getName());
+        System.out.println("Год публикации книги: " + two.getYear());
+        System.out.println("Имя фамилия писателя: " +two.getAuthor().getName() + " " + two.getAuthor().getSurname());
 
     }
-
 }
