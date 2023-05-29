@@ -1,3 +1,4 @@
+
 public class Main {
     public static void main(String[] args) {
         Author author = new Author("Лев", "Толстой");
@@ -20,5 +21,7 @@ public class Main {
         System.out.println("Год публикации книги: " + two.getYear());
         System.out.println("Имя фамилия писателя: " +two.getAuthor().getName() + " " + two.getAuthor().getSurname());
 
+
     }
+
 }
